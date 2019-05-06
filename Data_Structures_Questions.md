@@ -3,10 +3,16 @@ Answer the following questions for each of the data structures you implemented a
 ## Queue
 
 1. What is the runtime complexity of `enqueue`?
+    As an array = O(1)
+    As a linked list = O(1)
 
 2. What is the runtime complexity of `dequeue`?
+    As an array = O(len) since under the hood each element in the array.  It would reduce to O(1), though.
+    As a linked list = O(1).  It can run much faster than as an array, especially if the size of the array gets large.
 
 3. What is the runtime complexity of `len`?
+    As an array = O(1)
+    As a linked list = O(1)
 
 ## Binary Search Tree
 

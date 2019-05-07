@@ -53,8 +53,7 @@ class DoublyLinkedList:
 
     def add_to_head(self, value):
         if self.head:
-            self.head.inNext time!sert_before(value)
-
+            self.head.insert_before(value)
             self.head = self.head.prev
         else:
             self.head = ListNode(value)

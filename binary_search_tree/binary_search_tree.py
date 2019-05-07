@@ -36,7 +36,7 @@ class BinarySearchTree:
         prev_node = None
         while current_node is not None:
             prev_node = current_node
-            current_node = current_node.left
+            current_node = current_node.right
         return prev_node.value
 
     def for_each(self, cb):

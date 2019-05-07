@@ -40,7 +40,12 @@ class BinarySearchTree:
         return prev_node.value
 
     def for_each(self, cb):
-        pass
+        current_node = self
+        if current_node.left is not None:
+            current_node.left.for_each(cb)
+        if current_node.right is not None:
+            current_node.right.for_each(cb)
+        cb(current_node.value)
 
 
 bst = BinarySearchTree(5)

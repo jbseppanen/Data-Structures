@@ -9,13 +9,13 @@ class BinarySearchTree:
         prev_node = None
         while current_node is not None:
             prev_node = current_node
-            if current_node.value < value:
+            if current_node.value > value:
                 current_node = current_node.left
-            elif current_node.value > value:
+            elif current_node.value < value:
                 current_node = current_node.right
             else:
                 return  # Since value is already present.
-        if prev_node.value < value:
+        if prev_node.value > value:
             prev_node.left = BinarySearchTree(value)
         else:
             prev_node.right = BinarySearchTree(value)
@@ -28,3 +28,12 @@ class BinarySearchTree:
 
     def for_each(self, cb):
         pass
+
+
+bst = BinarySearchTree(5)
+bst.insert(2)
+bst.insert(3)
+bst.insert(7)
+bst.insert(6)
+print(bst.left.right.value)  # 3
+print(bst.right.left.value)  # 6

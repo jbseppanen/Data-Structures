@@ -46,12 +46,3 @@ class BinarySearchTree:
         if current_node.right is not None:
             current_node.right.for_each(cb)
         cb(current_node.value)
-
-
-bst = BinarySearchTree(5)
-bst.insert(2)
-bst.insert(3)
-bst.insert(7)
-bst.insert(6)
-print(bst.left.right.value)  # 3
-print(bst.right.left.value)  # 6

@@ -53,7 +53,8 @@ class DoublyLinkedList:
 
     def add_to_head(self, value):
         if self.head:
-            self.head.insert_before(value)
+            self.head.inNext time!sert_before(value)
+
             self.head = self.head.prev
         else:
             self.head = ListNode(value)
@@ -100,7 +101,6 @@ class DoublyLinkedList:
             node.delete()
             self.tail.insert_after(node.value)
             self.tail = self.tail.next
-            print()
 
     def delete(self, node):
         if node.prev is None:

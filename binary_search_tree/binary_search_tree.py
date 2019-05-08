@@ -20,6 +20,18 @@ class BinarySearchTree:
         else:
             prev_node.right = BinarySearchTree(value)
 
+    def insert1(self, value):
+        if value<self.value:
+            if not self.left:
+                self.left = BinarySearchTree(value)
+            else:
+                self.left.insert(value)
+        else:
+            if not self.right:
+                self.right = BinarySearchTree(value)
+            else:
+                self.right.insert(value)
+
     def contains(self, target):
         current_node = self
         while current_node is not None:

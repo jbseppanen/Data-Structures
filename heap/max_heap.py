@@ -52,19 +52,3 @@ class Heap:
         elif lchild_idx < len(self.storage):
             if self.storage[index] < self.storage[swap_indx]:
                 self.storage[index], self.storage[swap_indx] = self.storage[swap_indx], self.storage[index]
-
-
-# 1. Store a reference to the first heap element
-# 2. Set the value of the first heap element to the value
-# of the last heap element
-# 3. Pop from the heap’s storage array to remove the last
-# heap element
-# 4. In a loop:
-# 1A.Have the (new) first heap element check its two
-# children using the given formulas
-# B.It either of the element’s children are larger, swap
-# the heap value of the parent node with the value of
-# the larger child’s value via their respective indices
-# 6. Continue this loop until the element is in a spot
-# where neither of its children are larger than it (or it’s
-# reached a spot where it has no children)
